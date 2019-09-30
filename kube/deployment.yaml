@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-geocode-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-app
+      tier: geocode
+  template:
+    metadata:
+      labels:
+        app: weather-app
+        tier: geocode
+    spec:
+      containers:
+      - name: weather-geocode-service
+        image: harbor.virtualiseme.com.au/weather-app/geocode:latest
+        ports:
+        - containerPort: 3001
