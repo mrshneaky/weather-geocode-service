@@ -13,7 +13,6 @@ RUN npm install
 ## Add application code
 COPY ./app.js /src/
 COPY ./utils /src/utils/
-COPY ./leaderboard/start.sh /src/start.sh
 
 ## Set environment to "development" by default
 ENV NODE_ENV development
@@ -24,4 +23,4 @@ EXPOSE 3001
 
 ## The command uses nodemon to run the application
 #RUN ["chmod", "+x", "start.sh"]
-CMD ["node app.js"]
+CMD ["npm install", "node app.js"]
