@@ -19,7 +19,8 @@ COPY ./leaderboard/start.sh /src/start.sh
 ENV NODE_ENV development
 
 ## Allows port 3000 to be publicly available
-EXPOSE 80, 3001
+EXPOSE 80
+EXPOSE 3001
 
 ## The command uses nodemon to run the application
 #RUN ["chmod", "+x", "start.sh"]
