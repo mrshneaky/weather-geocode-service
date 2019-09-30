@@ -23,4 +23,4 @@ EXPOSE 3001
 
 ## The command uses nodemon to run the application
 #RUN ["chmod", "+x", "start.sh"]
-CMD ["node app.js"]
+CMD node app.js
