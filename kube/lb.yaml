@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: weather-geocode-lb
+spec:
+  selector:
+    app: weather-app
+    tier: geocode
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3001
+  type: LoadBalancer
