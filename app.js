@@ -3,7 +3,7 @@ const express = require('express')
 const geocode = require('./utils/geocode')
 const app = express();
 
-const PORT = process.env.HTTP_PORT || 3001
+const PORT = process.env.WEATHER_GEOCODE_LB_SERVICE_PORT || 3001
 
 app.get('/api', (req, res) => {
     if (!req.query.address){
