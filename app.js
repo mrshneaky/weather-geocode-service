@@ -1,7 +1,10 @@
 const path = require('path')
 const express = require('express')
 const geocode = require('./utils/geocode')
+var cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 const PORT = process.env.WEATHER_GEOCODE_LB_SERVICE_PORT || 3001
 
